@@ -5,3 +5,6 @@
 
 
 *Email:* dr.ademgencer@gmail.com
+
+
+*View project at:* https://wandb.ai/afsu/3D-DenseNet121-Lung-CT
