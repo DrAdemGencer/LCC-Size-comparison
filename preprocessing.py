@@ -1,9 +1,8 @@
-!pip install nibabel
-!pip install pydicom
-!pip install monai
-import monai
-print("--- Installation completed! ---")
-
+"""
+    Resolution Matters: Impact of 3D CT Image Size on DenseNet3D CNN Performance for Lung Cancer Classification
+    Author: Adem GENCER, MD
+    Email: dr.ademgencer@gmail.com
+"""
 
 # =================================================
 # 1. Libraries
@@ -37,9 +36,9 @@ device = "cuda" if torch.cuda.is_available() else "cpu"
 print("Using {} device".format(device))
 
 # Directory settings
-data_directory = "../dataset/lung_roi"
+data_directory = "./lung_roi"
 logs_directory = "./logs"
-pdata_directory = "../dataset/npy_144"
+pdata_directory = "./npy_lung_32"
 
 # Data settings
 sample_size = 1000
@@ -47,7 +46,7 @@ exclude_classes = []
 
 # Preprocess settings
 voxel_spacing = (2.0, 2.0, 2.0)
-image_size = (144, 144, 144)
+image_size = (32, 32, 32)
 hu_range = {"a_min": -1000, "a_max": 200}  # Hounsfield Unit range for CT
 suv_range = {"a_min": 0, "a_max": 15}      # Standard Uptake Value range for PET (NOT SUV_MAX ! Activity (MBq): 5.286 For every SUV Value.
 
